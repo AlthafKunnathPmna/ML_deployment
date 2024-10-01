@@ -1,0 +1,30 @@
+<html>
+    <style>
+        body {
+            background-color: {% if data == 0 %} #ff4d4d {% else %} #1affc6 {% endif %};
+        }
+    </style>
+<body >
+
+    <center>
+
+        <h1>  PREDICTION :  </h1>
+    
+    {%if data == 0%}
+    <h1>THE CUSTOMER WOULD NOT BUY</h1> <br>
+    <img src="static/sad.jpg" width = "300" height = "200">  
+
+    {%else%}
+    <h1>THE CUSTOMER WOULD BUY</h1><br>
+    <img src="static/happy.jpeg" width = "300" height = "200">
+    
+    {%endif%}
+
+        <br><br>
+    <a href='/'>go back to home page</a>
+
+    </center>
+
+</body>
+
+</html>
