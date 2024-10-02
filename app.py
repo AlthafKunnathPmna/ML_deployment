@@ -3,16 +3,18 @@ from flask import Flask, render_template, request
 import pickle
 import numpy as np
 
+# load model
 with open('F:/vs code/commerce/data_science_assin_NB_model.pkl','rb') as f :
     model = pickle.load(f)
     
 
 app = Flask(__name__)
-
+# home page or first page
 @app.route('/')
 def man():
     return render_template('home.html')
 
+# prediction and running the prediction page
 @app.route('/predict', methods=['POST'])
 def home():
     data1 = request.form['a']
