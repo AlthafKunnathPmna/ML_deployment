@@ -4,11 +4,12 @@ import pickle
 import numpy as np
 
 # load model
-with open('F:/vs code/commerce/data_science_assin_NB_model.pkl','rb') as f :
+with open('data_science_assin_NB_model.pkl','rb') as f :
     model = pickle.load(f)
     
 
 app = Flask(__name__)
+
 # home page or first page
 @app.route('/')
 def man():
